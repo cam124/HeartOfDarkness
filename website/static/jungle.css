@@ -1,0 +1,128 @@
+/* Set the background color of the body to a dark green */
+body {
+    background-color: #234d20;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set the font family and color for the entire page */
+  body, h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+  }
+  
+  /* Add a container to hold the page content */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  /* Style the header with a jungle-themed background image */
+  .header {
+    background-image: url('Rainforest.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Style the title of the header */
+  .header h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px #333;
+  }
+  
+  /* Style the navigation menu */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(35, 77, 32, 0.8);
+    padding: 16px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    text-transform: none;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    color: #fff; /* set font color */
+    padding: 16px; /* set padding */
+    transition: background-color 0.2s ease-out, color 0.2s ease-out; /* add transition */
+  }
+  
+  /* add hover effect */
+  .navbar a:hover {
+    background-color: #3e8e41;
+    color: #fff;
+  }
+  
+  /* Style the dropdown button */
+  .dropbtn {
+    background-color: rgba(35, 77, 32, 0.8);
+    color: white;
+    padding: 16px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* On hover, add a darker green */
+  .dropbtn:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Style the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* On hover, add a grey background color */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Style the main content area */
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .main-content h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+  
+  .main-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: rgba(35, 77, 32, 0.8);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  .footer p {
+    font-size: 1.2rem;
+    color: #fff;
+  }
