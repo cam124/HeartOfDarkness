@@ -9,3 +9,5 @@ def create_app():
     thisapp.register_blueprint(views, url_prefix='/')
 
     return thisapp
+
+myapp = create_app()
