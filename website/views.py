@@ -1,9 +1,10 @@
 from flask import Blueprint, render_template, request
 import openai
-import website.config as configure
+from boto.s3.connection import S3Connection
+import os
 
 
-API_KEY = configure.openAPI_key
+API_KEY = S3Connection(os.environ['API_KEY'], os.environ['S3_SECRET'])
 
 views = Blueprint('views', __name__)
 openai.api_key = API_KEY
