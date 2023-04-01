@@ -12,7 +12,7 @@ openai.api_key = API_KEY
 
 @views.route('/')
 def home():
-    return render_template('home.html', API_KEY)
+    return render_template('home.html', API = API_KEY)
 
 @views.route('/author')
 def author():
