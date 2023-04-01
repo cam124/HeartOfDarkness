@@ -4,7 +4,7 @@ from boto.s3.connection import S3Connection
 import os
 
 
-API_KEY = S3Connection(os.environ['API_KEY'], os.environ['S3_SECRET'])
+API_KEY = S3Connection(os.environ['API_KEY'])
 
 views = Blueprint('views', __name__)
 openai.api_key = API_KEY
