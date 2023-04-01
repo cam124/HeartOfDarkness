@@ -36,10 +36,9 @@ def travelbrochure():
 def essay():
     return render_template('essay.html')
 
-@views.route('/MarlowBot')
 def marlowbot(user_input, context):
     # Generate response using OpenAI GPT-3 model
-    prompt = f"{context}Marlow: {user_input}\nYou: "
+    prompt = f"{context}Marlow: {user_input}\n"
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=prompt,
@@ -55,6 +54,7 @@ def marlowbot(user_input, context):
     marlow_response = response.choices[0].text.strip()
     return marlow_response
 
+@views.route('/MarlowBot')
 def chat():
     # Get user input and context
     user_input = request.args.get('user_input', '')
