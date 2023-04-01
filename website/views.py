@@ -58,7 +58,7 @@ def marlowbot(user_input, context):
 def chat():
     # Get user input and context
     user_input = request.args.get('user_input', '')
-    context = request.args.get('context', 'you are Charles Marlow')
+    context = request.args.get('context', 'you are Charles Marlow ')
 
     # If user input is not empty, generate bot response
     if user_input:
