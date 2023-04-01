@@ -1,9 +1,12 @@
 from flask import Blueprint, render_template, request
 import openai
-import random
+import website.config as configure
+
+
+API_KEY = configure.openAPI_key
 
 views = Blueprint('views', __name__)
-openai.api_key = "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"
+openai.api_key = API_KEY
 
 @views.route('/')
 def home():
@@ -33,6 +36,7 @@ def travelbrochure():
 def essay():
     return render_template('essay.html')
 
+@views.route('/MarlowBot')
 def marlowbot(user_input, context):
     # Generate response using OpenAI GPT-3 model
     prompt = f"{context}Marlow: {user_input}\nYou: "
