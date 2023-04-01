@@ -42,8 +42,8 @@ def marlowbot(user_input, context):
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=prompt,
-        temperature=0.7,
-        max_tokens=60,
+        temperature=0.5,
+        max_tokens=100,
         n=1,
         stop=None,
         frequency_penalty=0,
@@ -58,7 +58,7 @@ def marlowbot(user_input, context):
 def chat():
     # Get user input and context
     user_input = request.args.get('user_input', '')
-    context = request.args.get('context', '')
+    context = request.args.get('context', 'you are Charles Marlow')
 
     # If user input is not empty, generate bot response
     if user_input:
