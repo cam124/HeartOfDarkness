@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MarlowBot Chat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>MarlowBot Chat</h1>
+    <div id="chat">
+        {% if context %}
+            {% for line in context.split("\n") %}
+                {% if "You:" in line %}
+                    <p><strong>You:</strong> {{ line.replace("You:", "") }}</p>
+                {% elif "Marlow:" in line %}
+                    <p><strong>Marlow:</strong> {{ line.replace("Marlow:", "") }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+    <form id="input-form" action="/chat" method="get">
+        <input type="text" name="user_input" placeholder="Say something...">
+        <input type="hidden" name="context" value="{{ context }}">
+        <button type="submit">Send</button>
+    </form>
+    <script>
+        $(document).ready(function() {
+            $('#chat').scrollTop($('#chat')[0].scrollHeight);
+            $('input[name="user_input"]').focus();
+        });
+    </script>
+</body>
+</html>

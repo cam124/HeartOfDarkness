@@ -1,6 +1,9 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
+import openai
+import random
 
 views = Blueprint('views', __name__)
+openai.api_key = "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"
 
 @views.route('/')
 def home():
@@ -29,3 +32,33 @@ def travelbrochure():
 @views.route('/essay')
 def essay():
     return render_template('essay.html')
+
+def marlowbot(user_input, context):
+    # Generate response using OpenAI GPT-3 model
+    prompt = f"{context}Marlow: {user_input}\nYou: "
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=prompt,
+        temperature=0.7,
+        max_tokens=60,
+        n=1,
+        stop=None,
+        frequency_penalty=0,
+        presence_penalty=0
+    )
+
+    # Extract text from response and return
+    marlow_response = response.choices[0].text.strip()
+    return marlow_response
+
+def chat():
+    # Get user input and context
+    user_input = request.args.get('user_input', '')
+    context = request.args.get('context', '')
+
+    # If user input is not empty, generate bot response
+    if user_input:
+        context += f"You: {user_input}\nMarlow: {marlowbot(user_input, context)}\n"
+
+    # Render chat template with context and user input
+    return render_template('chat.html', context=context, user_input=user_input)
