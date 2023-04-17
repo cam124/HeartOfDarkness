@@ -24,9 +24,9 @@ def map():
 def newsletter():
     return render_template('newsletter.html')
 
-@views.route('/tabloid')
+@views.route('/diary')
 def tabloid():
-    return render_template('tabloid.html')
+    return render_template('diary.html')
 
 @views.route('/travelbrochure')
 def travelbrochure():
