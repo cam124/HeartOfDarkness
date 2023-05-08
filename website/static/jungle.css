@@ -147,6 +147,11 @@ body {
     width: 75%;
   }
 
+  @font-face {
+    font-family: 'Allura';
+    src: url(static/Allura-Regular.ttf);
+  }
+
   .old-timey-title {
     text-align: center;
     font-size: 3rem;
@@ -160,9 +165,14 @@ body {
     margin-bottom: 10px;
   }
 
+  @font-face {
+    font-family: 'Marck Script';
+    src: url(static/MarckScript-Regular.ttf);
+  }
+
   .old-timey-text {
     font-size: 1.2rem;
-    font-family: 'Old Standard TT', serif;
+    font-family: 'Marck Script', cursive;
     line-height: 1.5;
     margin-bottom: 20px;
   }
