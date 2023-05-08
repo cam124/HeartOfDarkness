@@ -107,6 +107,11 @@ body {
     font-size: 2rem;
     margin-top: 30px;
   }
+
+  .main-content h3 {
+    font-size: 2rem;
+    margin-top: 15px;
+  }
   
   .main-content p {
     font-size: 1.2rem;
@@ -134,7 +139,7 @@ body {
   }
 
   .diary-entry {
-    background-color: #f4e4bc;
+    background-color: #a8d79c96;
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
@@ -152,7 +157,7 @@ body {
   .old-timey-subtitle {
     font-size: 2rem;
     font-family: 'Old Standard TT', serif;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .old-timey-text {
@@ -170,7 +175,7 @@ body {
     right: -10px;
     bottom: -10px;
     left: -10px;
-    background: url('paper-texture.jpg');
+    background: url('paper-texture.jpeg');
     opacity: 0.8;
     z-index: -1;
     border-radius: 10px;
