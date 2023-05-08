@@ -12,9 +12,9 @@
             {% if context %}
                 {% for line in context.split("\n") %}
                     {% if "You:" in line %}
-                        <p><strong>You:</strong> {{ line.replace("You:", "") }}</p>
+                        <p class="old-timey-text"><strong>You:</strong> {{ line.replace("You:", "") }}</p>
                     {% elif "Marlow:" in line %}
-                        <p><strong>Marlow:</strong> {{ line.replace("Marlow:", "") }}</p>
+                        <p class="old-timey-text"><strong>Marlow:</strong> {{ line.replace("Marlow:", "") }}</p>
                     {% endif %}
                 {% endfor %}
             {% endif %}
