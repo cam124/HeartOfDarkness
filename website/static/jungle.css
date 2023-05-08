@@ -126,6 +126,124 @@ body {
     margin: 30px;
   }
 
+  /* Style the diary entries */
+  .diary-entries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .diary-entry {
+    background-color: #f4e4bc;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px #000;
+    width: 60%;
+  }
+
+  .old-timey-title {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Old Standard TT', serif;
+    margin-top: 50px;
+  }
+
+  .old-timey-subtitle {
+    font-size: 2rem;
+    font-family: 'Old Standard TT', serif;
+    margin-bottom: 20px;
+  }
+
+  .old-timey-text {
+    font-size: 1.2rem;
+    font-family: 'Old Standard TT', serif;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  /* Add an old-timey paper background to the diary entries */
+  .diary-entry:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    background: url('paper-texture.jpg');
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 10px;
+  }
+
+  /* Add an old-timey border to the diary entries */
+  .diary-entry:after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    border: 2px solid #8b6914;
+    z-index: -1;
+    border-radius: 10px;
+  }
+
+/* Style the form for signatures */
+  .old-timey-signature {
+    font-size: 1.5rem;
+    font-family: 'Old Standard TT', serif;
+    margin-top: 20px;
+    text-align: right;
+    }
+
+/* Style the form for adding new diary entries */
+.new-entry-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  }
+  
+  .new-entry-form label {
+  font-size: 1.2rem;
+  font-family: 'Old Standard TT', serif;
+  margin-bottom: 10px;
+  }
+  
+  .new-entry-form input[type="text"], .new-entry-form textarea {
+  font-size: 1.2rem;
+  font-family: 'Old Standard TT', serif;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  width: 60%;
+  }
+  
+  .new-entry-form input[type="submit"] {
+  font-size: 1.2rem;
+  font-family: 'Old Standard TT', serif;
+  background-color: #8b6914;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  }
+  
+  .new-entry-form input[type="submit"]:hover {
+  background-color: #c1a35f;
+  }
+  
+  /* Style the error message */
+  .error {
+  color: red;
+  font-size: 1.2rem;
+  font-family: 'Old Standard TT', serif;
+  margin-top: 10px;
+  }
+
   /* Style the footer */
   .footer {
     background-color: rgba(35, 77, 32, 0.8);
@@ -133,7 +251,7 @@ body {
     padding: 20px;
     margin-top: 50px;
   }
-  
+
   .footer p {
     font-size: 1.2rem;
     color: #fff;
