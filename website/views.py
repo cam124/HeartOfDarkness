@@ -20,9 +20,9 @@ def author():
 def map():
     return render_template('map.html')
 
-@views.route('/newsletter')
-def newsletter():
-    return render_template('newsletter.html')
+@views.route('/marlow')
+def marlow():
+    return render_template('marlow.html')
 
 @views.route('/diary')
 def tabloid():

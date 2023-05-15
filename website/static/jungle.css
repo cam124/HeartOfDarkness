@@ -131,6 +131,10 @@ body {
     margin: 30px;
   }
 
+  .poster { 
+    margin: 10px;
+  }
+
   /* Style the diary entries */
   .diary-entries {
     display: flex;
