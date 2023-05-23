@@ -16,9 +16,9 @@ def home():
 def author():
     return render_template('author.html')
 
-@views.route('/map')
+@views.route('/natives-perspective')
 def map():
-    return render_template('map.html')
+    return render_template('natives.html')
 
 @views.route('/marlow')
 def marlow():
