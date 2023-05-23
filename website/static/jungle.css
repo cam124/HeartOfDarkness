@@ -151,6 +151,15 @@ body {
     width: 75%;
   }
 
+  .letter-entry {
+    background-color: #a8d79c96;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px #000;
+    width: 95%;
+  }
+
   @font-face {
     font-family: 'Allura';
     src: url(static/Allura-Regular.ttf);
