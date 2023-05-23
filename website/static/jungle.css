@@ -228,12 +228,45 @@ body {
   background-color: #c1a35f;
   }
   
-  /* Style the error message */
-  .error {
-  color: red;
-  font-size: 1.2rem;
-  font-family: 'Old Standard TT', serif;
-  margin-top: 10px;
+  /* Style the natives diary entries */
+  .native-diary-entries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .native-diary-entry {
+    background-color: #a8d79c96;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px #000;
+    width: 75%;
+  }
+
+  @font-face {
+    font-family: 'Indie-Flower';
+    src: url(static/IndieFlower-Regular.ttf);
+  }
+
+  .native-old-timey-title {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Old Standard TT', serif;
+    margin-top: 50px;
+  }
+
+  .native-old-timey-subtitle {
+    font-size: 2rem;
+    font-family: 'Indie-Flower', cursive;
+    margin-bottom: 10px;
+  }
+
+  .native-old-timey-text {
+    font-size: 1.2rem;
+    font-family: 'Indie-Flower', cursive;
+    line-height: 1.5;
+    margin-bottom: 20px;
   }
 
   /* Style the footer */
