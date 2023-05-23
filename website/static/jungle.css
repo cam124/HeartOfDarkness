@@ -193,10 +193,15 @@ body {
 /* Style the form for signatures */
   .old-timey-signature {
     font-size: 1.5rem;
-    font-family: 'Allura', cursive;
+    font-family: 'Yellowtail', cursive;
     margin-top: 20px;
-    text-align: right;
+    text-align: left;
     }
+
+  @font-face {
+    font-family: 'Yellowtail';
+    src: url(static/Yellowtail.ttf);
+  }
 
 /* Style the form for adding new diary entries */
 .new-entry-form {
